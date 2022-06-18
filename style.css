@@ -1,0 +1,261 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@800&display=swap');
+    
+* {
+    
+    margin: 0;
+    padding: 0;
+    
+    
+    /* Cores */
+    --azul-escuro: #13293D;
+    --azul-medio: #006494; 
+    --azul-claro: #1B98E0;
+    --titulo: white;
+    --sombra: rgba(255, 255, 255, 0.411);
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: gray;
+}
+/* Menu */
+header > nav {
+    background-color: blue;
+    padding: 10px;
+}
+header > nav > ul > li{
+    display: inline-block;
+    padding-left: 3%;
+    list-style: none;
+}
+header > nav > ul > li > a{
+    color: var(--titulo);
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 700;
+}
+header > nav > ul > li > a:hover {
+    font-weight: bold;
+    text-shadow: 3px 3px var(--sombra);
+}
+p {
+    margin: 0;
+    text-indent: 3ch;
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: left;
+    color: var(--titulo);
+    font-family: 'Anton', sans-serif;
+    text-shadow: 2px 3px var(--azul-medio);
+}
+.title {
+    text-align: center;
+}
+/* - Seções */
+section {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--azul-escuro);
+}
+/* --> Contato */
+.contato {
+    color: var(--titulo);
+    font-family: 'Open Sans', sans-serif;
+}
+.contato > p {
+    text-align: center;
+}
+.contato > div {
+    display: inline-block;
+    vertical-align: top;
+}
+/* ---> Lateral Direita */
+.contato > div#direita {
+    width: 20%;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+/* ---> Centro */
+.contato > div#centro {
+    width: 53%;
+    padding-left: 3%;
+}
+.contato > div#centro > form {
+    padding: 5px;
+    text-align: left;
+}
+.contato > div#centro > form > label {
+    width: 100%;
+}
+.contato > div#centro > form > input {
+    border: none;
+    display: block;
+    text-align: left;
+    width: 90%;
+    border-bottom: solid 2px var(--azul-medio);
+    background: transparent;
+}
+.contato > div#centro > form > textarea {
+    margin-top: 5px;
+    width: 90%;
+}
+.contato > div#centro > form > input#btn {
+    border: none;
+    color: var(--titulo);
+    font-size: larger;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--azul-claro);
+}
+/* ---> Lateral Esquerda*/
+.contato > div#esquerda {
+    width: 20%;
+    right: 5%;
+}
+.contato > div#esquerda > ul  {
+    width: 100%;
+}
+.contato > div#esquerda > ul > li {
+    list-style: none;
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+
+}
+.contato > div#esquerda > ul > li > a {
+    width: 30%;
+}
+.contato > div#esquerda > ul > li > div {
+    width: 55%;
+    padding: 3%;
+    font-size: small;
+    display: inline-block;
+    text-align: left;
+    border-radius: 10px;
+    background-color: var(--azul-claro);
+    /* Animação */
+    opacity: 0;
+    display: hidden;
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+    transition: opacity 0.5s linear;
+}
+.contato > div#esquerda > ul > li > div> a {
+    color: var(--titulo);
+    text-decoration: none;
+    font-weight: bold;
+}
+.contato >  div#esquerda .social:hover div#insta{
+    visibility: visible;
+    opacity: 1;
+} 
+.contato > div#esquerda > ul > li > div:hover {
+    visibility: visible;
+    opacity: 1;
+}
+.contato > div#esquerda  img{
+    width: 25%;
+    border-radius: 100%;
+}
+.contato > div#esquerda  img:hover {
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+    box-shadow:  0 0 1em var(--sombra);
+}
+/* ---> Rodape */
+.contato > div#rodape {
+    width: 100%;
+}
+.contato > div#rodape img {
+    width: 20%;
+    text-align: center;
+}
+/* ----> Laterais */
+.contato > div#rodape > div {
+    width: 30%;
+    display: inline-block;
+}
+.contato > div#rodape > div > p {
+    text-align: center;
+    font-size: medium;
+}
+.contato > div#rodape > div > p > span {
+    text-align: center;
+    font-size: larger;
+    color: var(--azul-medio);
+}
+
+
+
+.rolagem {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    background-color: var(--azul-escuro);
+}
+
+
+/* -> Criação de Icone de Projeto */
+.project {
+    /*Ajuste a largura e altura desejadas aqui*/
+    --width-p: 290px;
+    --height-p: 290px;
+    --radius-p: 20px;
+
+    margin: 2%;
+    position: relative;
+    width: var(--width-p);
+    height: var(--height-p);
+    border-radius: var(--radius-p);
+    background-image: url(img/portifolio-modelo.png);
+    box-shadow: 5px 5px 5px rgba(24, 23, 23, 0.637);
+    display: inline-block;
+}
+.project:hover{
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.project > .bg-video {
+    width: var(--width-p);
+    height: var(--height-p);
+    position: absolute;
+    border-radius: var(--radius-p);
+} 
+.project > .bg-video > video{
+    border-radius: var(--radius-p);
+    top: 0;
+    left: 0;
+    z-index: -1; /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* evita do video passar a altura desejada do .wrap */
+}
+/* --> Conteiner de Texto de Projeto */
+.container {
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    position: absolute;
+    border-radius: var(--radius-p);
+    background-color: rgba(255, 255, 255, 0.952);
+}
+.container:hover {
+    background: -moz-linear-gradient(top, rgba(255,0,0,0) 0%, rgb(255, 255, 255) 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,rgb(255, 255, 255) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgb(255, 255, 255) 100%);
+    color: rgba(0, 0, 0, 0.363);
+}
+.container h3 {
+    padding-left: 0.5em;
+}
