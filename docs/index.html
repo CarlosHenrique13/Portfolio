@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padrão de Documentação</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://carloshenrique13.github.io/Doc-D/css/style.css">
+    <style>
+        .corpo {
+            width: 100%;
+            display: inline-block;
+            background-color: green;
+        }
+        .menu-lateral{
+            width: 20%;
+            display: inline-block;
+            float: none;
+        }
+        .main{
+            width: 70%;
+            padding-left: 2%;
+            display: inline-block;
+            background-color: red;
+        }
+        .main > iframe {
+            width: 1000px;
+            position: relative;
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Capeçalho -->
+    <header class="header">
+       
+    </header>
+    
+    <hr><!-- Separador -->
+
+    <!-- Corpo do Site -->
+    <div class="corpo">
+
+
+        <!-- Menu Lateral -->
+        <nav class="menu-lateral">
+            <!-- Logo -->
+            <img src="./ico/logo.png" alt="">
+
+            <!-- Primeiro Menu -->
+            <div>
+                <li><a href="">1</a></li>
+                <li><a href="">sub-menu</a>
+                    <ul>
+                        <li><a href=""><img src="./ico/logo.png" alt="">2</a></li>
+                        <li><img src="./ico/logo.png" alt=""><a href="">programação</a></li>
+                    </ul>
+                </li>
+                <li><a href=""><img src="./ico/logo.png" alt="">masi 4</a></li>
+                <li><a href="">5</a></li>
+            </div>
+            
+            <!-- Segundo Menu -->
+            <div>
+                <li><a href="">01</a></li>
+                <li><a href="">sub-menu</a>
+                    <ul>
+                        <li><a href="">02</a></li>
+                        <li><a href="">03</a></li>
+                        <li><a href="">04</a></li>
+                        <li><a href="">05</a></li>
+                    </ul>
+                </li>
+            </div>
+        </nav>
+
+
+        <!-- Conteudo Principal-->
+        <section class="main">
+            <iframe name="conteudos" src="./padrao.html" width="100%" frameborder="0">
+
+            </iframe>
+           
+        </section>
+
+
+    </div>
+
+    
+   
+
+   
+
+    <!-- Rodape -->
+    <footer class="footer">
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea maiores ipsam minima optio, alias illum consequatur architecto veritatis autem, doloremque voluptatum expedita sequi voluptates? Deserunt saepe illum sed voluptate suscipit.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

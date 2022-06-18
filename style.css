@@ -5,7 +5,9 @@
     
     margin: 0;
     padding: 0;
-    
+    word-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+
     
     /* Cores */
     --azul-escuro: #13293D;
@@ -41,12 +43,24 @@ header > nav > ul > li > a:hover {
     font-weight: bold;
     text-shadow: 3px 3px var(--sombra);
 }
+
+
+
+a {
+    color: var(--titulo);
+    text-decoration: none;
+}
+a:hover {
+    text-shadow:  0.5em 0.5em 0.5em var(--sombra);
+}
 p {
     margin: 0;
     text-indent: 3ch;
     font-family: 'Open Sans', sans-serif;
 }
 h1 {
+    text-indent: 1em;
+    font-size: 35px;
     text-align: left;
     color: var(--titulo);
     font-family: 'Anton', sans-serif;
@@ -62,140 +76,13 @@ section {
     width: 100%;
     background-color: var(--azul-escuro);
 }
-/* --> Contato */
-.contato {
-    color: var(--titulo);
-    font-family: 'Open Sans', sans-serif;
-}
-.contato > p {
-    text-align: center;
-}
-.contato > div {
-    display: inline-block;
-    vertical-align: top;
-}
-/* ---> Lateral Direita */
-.contato > div#direita {
-    width: 20%;
-    padding-left: 10px;
-    vertical-align: middle;
-}
 
-/* ---> Centro */
-.contato > div#centro {
-    width: 53%;
-    padding-left: 3%;
-}
-.contato > div#centro > form {
-    padding: 5px;
-    text-align: left;
-}
-.contato > div#centro > form > label {
-    width: 100%;
-}
-.contato > div#centro > form > input {
-    border: none;
-    display: block;
-    text-align: left;
-    width: 90%;
-    border-bottom: solid 2px var(--azul-medio);
-    background: transparent;
-}
-.contato > div#centro > form > textarea {
-    margin-top: 5px;
-    width: 90%;
-}
-.contato > div#centro > form > input#btn {
-    border: none;
-    color: var(--titulo);
-    font-size: larger;
-    text-align: center;
-    border-radius: 5px;
-    font-family: 'Open Sans', sans-serif;
-    background-color: var(--azul-claro);
-}
-/* ---> Lateral Esquerda*/
-.contato > div#esquerda {
-    width: 20%;
-    right: 5%;
-}
-.contato > div#esquerda > ul  {
-    width: 100%;
-}
-.contato > div#esquerda > ul > li {
-    list-style: none;
-    text-align: right;
-    display: inline-block;
-    width: 100%;
 
-}
-.contato > div#esquerda > ul > li > a {
-    width: 30%;
-}
-.contato > div#esquerda > ul > li > div {
-    width: 55%;
-    padding: 3%;
-    font-size: small;
-    display: inline-block;
-    text-align: left;
-    border-radius: 10px;
-    background-color: var(--azul-claro);
-    /* Animação */
-    opacity: 0;
-    display: hidden;
-    -webkit-transition: opacity 0.5s linear;
-    -moz-transition: opacity 0.5s linear;
-    -o-transition: opacity 0.5s linear;
-    transition: opacity 0.5s linear;
-}
-.contato > div#esquerda > ul > li > div> a {
-    color: var(--titulo);
-    text-decoration: none;
-    font-weight: bold;
-}
-.contato >  div#esquerda .social:hover div#insta{
-    visibility: visible;
-    opacity: 1;
-} 
-.contato > div#esquerda > ul > li > div:hover {
-    visibility: visible;
-    opacity: 1;
-}
-.contato > div#esquerda  img{
-    width: 25%;
-    border-radius: 100%;
-}
-.contato > div#esquerda  img:hover {
-    -moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-    box-shadow:  0 0 1em var(--sombra);
-}
-/* ---> Rodape */
-.contato > div#rodape {
-    width: 100%;
-}
-.contato > div#rodape img {
-    width: 20%;
-    text-align: center;
-}
-/* ----> Laterais */
-.contato > div#rodape > div {
-    width: 30%;
-    display: inline-block;
-}
-.contato > div#rodape > div > p {
-    text-align: center;
-    font-size: medium;
-}
-.contato > div#rodape > div > p > span {
-    text-align: center;
-    font-size: larger;
-    color: var(--azul-medio);
-}
+/* 
 
 
 
+*/
 .rolagem {
     margin: 0;
     width: 100%;
@@ -204,6 +91,12 @@ section {
     background-color: var(--azul-escuro);
 }
 
+
+/*
+=== Icones de Projetos ===
+Responsavel pela criação dos icones de projetos com video de fundo,
+e descição do Projeto. 
+*/
 
 /* -> Criação de Icone de Projeto */
 .project {
@@ -214,17 +107,18 @@ section {
 
     margin: 2%;
     position: relative;
+    display: inline-block;
     width: var(--width-p);
     height: var(--height-p);
     border-radius: var(--radius-p);
-    background-image: url(img/portifolio-modelo.png);
-    box-shadow: 5px 5px 5px rgba(24, 23, 23, 0.637);
-    display: inline-block;
+    box-shadow:  0 0 1em rgba(0, 0, 0, 0.692);
 }
 .project:hover{
     -moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
+    box-shadow:  0 0 1em var(--sombra);
+
 }
 .project > .bg-video {
     width: var(--width-p);
@@ -241,6 +135,7 @@ section {
     height: 100%;
     overflow: hidden; /* evita do video passar a altura desejada do .wrap */
 }
+
 /* --> Conteiner de Texto de Projeto */
 .container {
     width: 100%;
@@ -259,3 +154,211 @@ section {
 .container h3 {
     padding-left: 0.5em;
 }
+
+
+/*
+Resnponsavel pela aba de contato 
+
+
+
+*/
+/* --> Contato */
+.contato {
+    color: var(--titulo);
+    font-family: 'Open Sans', sans-serif;
+}
+.contato > p {
+    text-align: center;
+}
+.contato > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* ---> Lateral Direita */
+.contato > div#direita {
+    width: 20%;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+.contato > div#direita span{
+    color: var(--azul-claro);
+}
+/* ---> Centro */
+.contato > div#centro {
+    width: 53%;
+    padding-left: 3%;
+}
+.contato > div#centro > form {
+    padding: 5px;
+    text-align: left;
+}
+.contato > div#centro > form > label {
+    width: 100%;
+    margin-top: 5px;
+}
+/* ----> Animação do Imput*/
+.label-float{
+    position: relative;
+    padding-top: 13px;
+}
+.label-float input{
+border: 0;
+outline: none;
+width: 90%;
+color: var(--azul-medio);
+border-bottom: solid 4px var(--azul-medio);
+/* Animação */
+background-color: transparent;
+transition: all .3s ease-out;
+-webkit-transition: all .3s ease-out;
+-moz-transition: all .3s ease-out;
+-webkit-appearance:none;
+border-radius:0;
+}
+.label-float input:hover{
+    border: none;
+    border-bottom: solid 4px var(--azul-claro);
+    box-shadow:  0 0.1em 0 var(--sombra);
+}
+.label-float input:focus{
+border-bottom: 4px solid var(--azul-claro);
+}
+.label-float input::placeholder{
+color:transparent;
+}
+.label-float label{
+pointer-events: none;
+position: absolute;
+top: 0;
+left: 0;
+margin-top: 13px;
+transition: all .3s ease-out;
+-webkit-transition: all .3s ease-out;
+-moz-transition: all .3s ease-out;
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label{
+margin-top: 0;
+}
+.contato > div#centro > form > textarea {
+    width: 90%;
+    border: none;
+    padding: 3px;
+    resize: none;
+    outline: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: var(--titulo); 
+    background-color: var(--azul-medio);
+}
+.contato > div#centro > form > textarea:focus {
+    background-color: var(--azul-claro);
+    box-shadow:  0 0 1em var(--sombra);
+}
+.contato > div#centro > form > textarea:hover {
+    box-shadow:  0 0 1em var(--sombra);
+}
+.contato > div#centro > form > button#btn {
+    border: none;
+    color: var(--titulo);
+    width: 90%;
+    font-size: larger;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--azul-claro);
+}
+.contato > div#centro > form > button#btn:hover {
+    box-shadow:  0 0 1em var(--sombra);
+    font-size: x-large;
+
+}
+
+/* ---> Lateral Esquerda*/
+.contato > div#esquerda {
+    width: 20%;
+    right: 5%;
+}
+.contato > div#esquerda > ul  {
+    width: 100%;
+}
+.contato > div#esquerda > ul > li {
+    list-style: none;
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+}
+.contato > div#esquerda > ul > li > a {
+    width: 30%;
+    border-radius: 100%;
+}
+.contato > div#esquerda > ul > li > div {
+    width: 55%;
+    padding: 3%;
+    font-size: smaller;
+    display: inline-block;
+    text-align: left;
+    border-radius: 10px;
+    background-color: var(--azul-claro);
+    /* Animação */
+    opacity: 0;
+    display: hidden;
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+    transition: opacity 0.5s linear;
+}
+.contato > div#esquerda > ul > li > div:hover {
+    box-shadow:  0 0 1em var(--sombra);
+}
+.contato > div#esquerda > ul > li > div > a {
+    color: var(--titulo);
+    font-weight: bold;
+    text-decoration: none;
+}
+.contato > div#esquerda > ul > li > div > a:hover {
+    text-shadow:  0.5em 0.5em 0.5em var(--azul-medio);
+}
+.contato > div#esquerda  img{
+    width: 25%;
+    border-radius: 100%;
+}
+.contato > div#esquerda  img:hover {
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+    box-shadow:  0 0 1em var(--sombra);
+}
+
+/* ---> Rodape */
+.contato > div#rodape {
+    width: 100%;
+}
+.contato > div#rodape img {
+    width: 20%;
+    text-align: center;
+}
+.contato > div#rodape img:hover {
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+/* ----> Laterais */
+.contato > div#rodape > div {
+    width: 30%;
+    display: inline-block;
+}
+.contato > div#rodape > div > p,a{
+    text-align: center;
+    font-size: medium;
+}
+.contato > div#rodape > div > p > a:hover{
+    text-shadow:  0.2em 0.2em 0.2em var(--sombra);
+}
+.contato > div#rodape > div > p > span {
+    text-align: center;
+    font-size: larger;
+    color: var(--azul-medio);
+}
+

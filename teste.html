@@ -6,36 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #container{
-            display: flex;
-            width: 70%;
-            margin: 0 auto; 
-        }
-        #page-wrap  {
-            margin: 0 auto; 
-            width: 200px;
-            height: 400px;
-            background: #000000;
-            }
-        #sidebar    {
-        margin: 0 auto; 
-        width: 100px;
-        height: 100px;
-        background: #ff0000;    
-        }
-        #other{
-        margin: 0 auto; 
-        width: 200px;
-        height: 200px;
-        background: #ff00ff;
-        }
+    
     </style>
 </head>
 <body>
-    <nav id="container">
-        <div id="page-wrap"></div>
-        <div id="sidebar"></div>
-        <div id="other"></div>
-    </nav>
+    <form id="contatoForm" method="get" action="mailto:teste@mail.com" target="_blank">
+        <input type="hidden" name="Subject" value="Meu assunto">
+        <input type="hidden" name="Body" value="">
+        <input class="cells" type="text" name="nome" placeholder="nome">
+        <input class="cells" type="text" name="email" placeholder="email">
+        <textarea name="texto" id="" cols="30" rows="10" placeholder="Menssagem"></textarea>
+        <button type="submit" value="click" id="enviar"></button>
+    </form>
+    <script>
+        $(function () {
+        document.getElementById('contatoForm').addEventListener('submit', function () {
+                var nome = this.querySelector('input[name=nome]'), nome = nome.value;
+                var email = this.querySelector('input[name=email]'), email = email.value;
+                var texto = ' Olá destinatário, \nMeu nome é '+ nome +' e meu email é '+ email;
+                this.querySelector('input[name=Body]').setAttribute('value', texto);
+            });
+        });
+    </script>
 </body>
 </html>
