@@ -15,34 +15,61 @@
     --azul-claro: #1B98E0;
     --titulo: white;
     --sombra: rgba(255, 255, 255, 0.411);
+    color: white;
 
 }
 body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background-image: url("./img/aedrian-oR8z-NvZkOo-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: gray;
+    overflow-x: hidden;
 }
 /* Menu */
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
 header > nav {
-    background-color: blue;
-    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #020202d3;
+    height: 8vh;
 }
-header > nav > ul > li{
-    display: inline-block;
-    padding-left: 3%;
+.nav-list {
     list-style: none;
+    display: flex;
 }
-header > nav > ul > li > a{
-    color: var(--titulo);
-    text-decoration: none;
-    font-size: larger;
-    font-weight: 700;
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
 }
-header > nav > ul > li > a:hover {
-    font-weight: bold;
-    text-shadow: 3px 3px var(--sombra);
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
 }
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+
+
+
 
 
 
@@ -74,7 +101,7 @@ section {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: var(--azul-escuro);
+    /*background-color: var(--azul-escuro);*/
 }
 
 
@@ -88,7 +115,6 @@ section {
     width: 100%;
     text-align: center;
     display: inline-block;
-    background-color: var(--azul-escuro);
 }
 
 
@@ -113,6 +139,7 @@ e descição do Projeto.
     border-radius: var(--radius-p);
     box-shadow:  0 0 1em rgba(0, 0, 0, 0.692);
 }
+
 .project:hover{
     -moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
@@ -123,7 +150,7 @@ e descição do Projeto.
 .project > .bg-video {
     width: var(--width-p);
     height: var(--height-p);
-    position: absolute;
+    /*position: absolute;*/
     border-radius: var(--radius-p);
 } 
 .project > .bg-video > video{
@@ -294,20 +321,15 @@ margin-top: 0;
     border-radius: 100%;
 }
 .contato > div#esquerda > ul > li > div {
-    width: 55%;
-    padding: 3%;
+    width: 25%;
+    padding: 10px;
     font-size: smaller;
-    display: inline-block;
+    position: absolute;
     text-align: left;
     border-radius: 10px;
     background-color: var(--azul-claro);
-    /* Animação */
-    opacity: 0;
-    display: hidden;
-    -webkit-transition: opacity 0.5s linear;
-    -moz-transition: opacity 0.5s linear;
-    -o-transition: opacity 0.5s linear;
-    transition: opacity 0.5s linear;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
 }
 .contato > div#esquerda > ul > li > div:hover {
     box-shadow:  0 0 1em var(--sombra);
