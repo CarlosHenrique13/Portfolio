@@ -1,12 +1,10 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@800&display=swap');
-    
-* {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Libre+Baskerville&family=Roboto&family=Satisfy&display=swap');* {
     
     margin: 0;
     padding: 0;
     word-wrap: break-word;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
     
     /* Cores */
@@ -22,11 +20,10 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-image: url("./img/aedrian-oR8z-NvZkOo-unsplash.jpg");
+    background-color: #03111a;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: gray;
     overflow-x: hidden;
 }
 /* Menu */
@@ -41,7 +38,7 @@ header > nav {
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #020202d3;
+    background: #06283D;
     height: 8vh;
 }
 .nav-list {
@@ -90,7 +87,7 @@ h1 {
     font-size: 35px;
     text-align: left;
     color: var(--titulo);
-    font-family: 'Anton', sans-serif;
+    font-family: 'Satisfy', cursive;
     text-shadow: 2px 3px var(--azul-medio);
 }
 .title {
@@ -117,6 +114,29 @@ section {
     display: inline-block;
 }
 
+/* Qualificações */
+.conhecimento{
+    width: 100%;
+    margin-left: 2%;
+}
+.info-lang {
+    background-color: #1365df46;
+    border-radius: 10px;
+    padding: 5px;
+    width: 90%;
+    margin-left: 3%;
+    box-shadow: 0 0 1em rgba(255, 255, 255, 0.459);
+    margin-bottom: 20px;
+}
+.lang-img-programa {
+    display: inline-block;
+}
+.lang-img-programa img{
+    width: 10%;
+}
+.lang-img-programa > img:hover .info-lang{
+    display: none;
+}
 
 /*
 === Icones de Projetos ===
@@ -168,6 +188,7 @@ e descição do Projeto.
     width: 100%;
     height: 30%;
     bottom: 0;
+    color: black;
     position: absolute;
     border-radius: var(--radius-p);
     background-color: rgba(255, 255, 255, 0.952);
@@ -180,8 +201,11 @@ e descição do Projeto.
 }
 .container h3 {
     padding-left: 0.5em;
+    color: black;
 }
-
+.container p{
+    color: black;
+}
 
 /*
 Resnponsavel pela aba de contato 
@@ -384,3 +408,23 @@ margin-top: 0;
     color: var(--azul-medio);
 }
 
+/* Footer */
+footer {
+    margin-top: 3vh;
+    width: 100%;
+    padding: 2.5vh;
+    background-color: #1365df46;
+    margin-bottom: 0vh;
+}
+footer ul {
+    display: inline-block;
+    align-items: center;
+    padding-left: 20vh;
+}
+footer p {
+    margin-top: 2vh;
+    text-align: center;
+}
+footer img{
+    width: 4vh;
+}
